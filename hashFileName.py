@@ -4,7 +4,8 @@ import datetime
 import sys
 import subprocess
 
-logfname = '/home/blake/hashlog.txt'
+# logfname = '/home/blake/hashlog.txt'
+logfname = '/home/blake/BH_Sync_New/Projects/hashData/hashlog.txt'
 av = sys.argv
 
 if len(av) == 1:
