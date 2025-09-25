@@ -3,6 +3,7 @@ import numpy as np
 import datetime
 import sys
 import subprocess
+import pyperclip  # to the paste buffer!
 
 # logfname = '/home/blake/hashlog.txt'
 logfname = '/home/blake/BH_Sync_New/Projects/hashData/hashlog.txt'
@@ -40,3 +41,4 @@ print(timestr, ', ', hashonly, file=ofp)
 ofp.close()
 
 print('Random file hash: ', result)
+pyperclip.copy(result)  # put it in the pastebuf!

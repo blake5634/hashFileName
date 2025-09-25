@@ -1,0 +1,4 @@
+cp ./hashFileName.py ~/BH_Sync_New/Maintenance/bin
+cp ./hashFileName.py ~/BH_Sync_New/Maintenance/bin/hashFileName
+cp ./hashFileName.py ~/bin
+cp ./hashFileName.py ~/bin/hashFileName
