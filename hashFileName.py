@@ -24,9 +24,7 @@ av = sys.argv
 if len(av) == 1:
     ext = ''
 elif len(av) == 3:
-    print('3 cl args')
     arg = av[1].replace('-','')
-    print('arg: ', arg)
     if arg == 'lookup':  # look up creation time of a prior hash
          thash = av[2]
          try:
