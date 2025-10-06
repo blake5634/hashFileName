@@ -5,6 +5,18 @@ import sys
 import subprocess
 import pyperclip  # to the paste buffer!
 
+
+def error(msg):
+    print ('Error: ', msg)
+    print ('Useage: ')
+    print ('''
+
+        >hashfileName [lookup   [hash]]
+
+''')
+    quit()
+
+
 # logfname = '/home/blake/hashlog.txt'
 logfname = '/home/blake/BH_Sync_New/Projects/hashData/hashlog.txt'
 av = sys.argv
@@ -12,14 +24,20 @@ av = sys.argv
 if len(av) == 1:
     ext = ''
 elif len(av) == 3:
-    if av[1] == 'lookup':  # look up creation time of a prior hash
+    print('3 cl args')
+    arg = av[1].replace('-','')
+    print('arg: ', arg)
+    if arg == 'lookup':  # look up creation time of a prior hash
          thash = av[2]
          try:
             res = (subprocess.check_output(['grep', thash, logfname])).decode('utf-8').strip()
             print(res)
          except:
              print('[', thash, '] not found')
+    else:
+        error(f'Unknown command: {arg}')
     quit()
+
 elif len(av) == 2:
     ext = av[1]
 else:
