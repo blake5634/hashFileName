@@ -18,7 +18,7 @@ def error(msg):
 
 
 # logfname = '/home/blake/hashlog.txt'
-logfname = '/home/blake/BH_Sync_New/Projects/hashData/hashlog.txt'
+logfname = '/home/blake/Personal_BH/Projects/hashData/hashlog.txt'
 av = sys.argv
 
 if len(av) == 1:
